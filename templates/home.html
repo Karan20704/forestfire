@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FWI Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FWI Prediction</h1>
+        <form action="{{ url_for('predict_datapoint') }}" method="post">
+            <div class="form-group">
+                <label for="Temperature">Temperature:</label>
+                <input type="text" class="form-control" id="Temperature" name="Temperature" placeholder="Temperature" required="required">
+            </div>
+            <div class="form-group">
+                <label for="RH">RH:</label>
+                <input type="text" class="form-control" id="RH" name="RH" placeholder="RH" required="required">
+            </div>
+            <div class="form-group">
+                <label for="Ws">Ws:</label>
+                <input type="text" class="form-control" id="Ws" name="Ws" placeholder="Ws" required="required">
+            </div>
+            <div class="form-group">
+                <label for="Rain">Rain:</label>
+                <input type="text" class="form-control" id="Rain" name="Rain" placeholder="Rain" required="required">
+            </div>
+            <div class="form-group">
+                <label for="FFMC">FFMC:</label>
+                <input type="text" class="form-control" id="FFMC" name="FFMC" placeholder="FFMC" required="required">
+            </div>
+            <div class="form-group">
+                <label for="DMC">DMC:</label>
+                <input type="text" class="form-control" id="DMC" name="DMC" placeholder="DMC" required="required">
+            </div>
+            <div class="form-group">
+                <label for="ISI">ISI:</label>
+                <input type="text" class="form-control" id="ISI" name="ISI" placeholder="ISI" required="required">
+            </div>
+            <div class="form-group">
+                <label for="Classes">Classes:</label>
+                <input type="text" class="form-control" id="Classes" name="Classes" placeholder="Classes" required="required">
+            </div>
+            <div class="form-group">
+                <label for="Region">Region:</label>
+                <input type="text" class="form-control" id="Region" name="Region" placeholder="Region" required="required">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <h2>The FWI prediction is {{ result }}</h2>
+    </div>
+</body>
+</html>
